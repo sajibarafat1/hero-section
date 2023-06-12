@@ -1,0 +1,104 @@
+:root {
+  --blue: #0a0c19;
+  --dark-violet: #1b1938;
+  --violet: #aa5cdb;
+  --white: #fff;
+  --off-white: #8f8f8f;
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Lexend Deca", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--blue);
+}
+
+.card {
+  display: flex;
+  width: 70%;
+  height: 60vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__text {
+  width: 50%;
+  height: 100%;
+  background-color: var(--dark-violet);
+  color: var(--white);
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.card-title > h1 {
+  margin-bottom: 25px;
+}
+
+.card-title > h1 > span {
+  color: var(--violet);
+}
+
+.card__image {
+  width: 50%;
+  height: 100%;
+  background-color: var(--violet);
+}
+
+.card-stat {
+  display: flex;
+  gap: 35px;
+}
+
+.card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card__text {
+    width: 75%;
+  }
+  .card__image {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    height: 90vh;
+    flex-direction: column-reverse;
+  }
+  .card__text {
+    width: 100%;
+  }
+  .card__image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card__text {
+    height: 80%;
+    padding: 20px;
+  }
+  .card-title > h1 {
+    font-size: 20px;
+  }
+  .card__image {
+    height: 20%;
+  }
+}
